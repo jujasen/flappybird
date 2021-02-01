@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .game {
   width: 500px;
   height: 700px;
@@ -20,9 +25,16 @@
 }
 
 .bird {
-  background-color: greenyellow;
+  background-color: #ff2f2f;
   position: absolute;
   width: 60px;
   height: 45px;
+}
+
+.pipe {
+  background-color: #99ff00;
+  width: 60px;
+  height: 300px;
+  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */

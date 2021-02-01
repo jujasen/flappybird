@@ -36,6 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keypress', control);
 
     function createPipes () {
+        let randomHeight = Math.random() * 200;
+        let pipeLeft = 500;
+        let pipeBottom = randomHeight;
         const pipe = document.createElement('div');
+        pipe.classList.add('pipe');
+        game.appendChild(pipe);
+        pipe.style.left = pipeLeft + 'px';
+        pipe.style.bottom = pipeBottom + 'px';
+
+        function movePipe() {
+            pipeLeft -= 2;
+            pipe.style.left = pipeLeft + 'px';
+
+            if (pipeLeft === -60) {
+                clearInterval(pipeTimer);
+                game.removeChild(pipe);
+            }
+        }
+
+        let pipeTimer = setInterval(movePipe, 20)
+        setTimeout(createPipes, 3000);
     }
+
+
+    createPipes();
 })
