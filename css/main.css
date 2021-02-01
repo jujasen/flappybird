@@ -32,9 +32,11 @@ body {
 }
 
 .pipe {
-  background-color: #99ff00;
-  width: 60px;
+  background-image: url("../../img/pipe.png");
+  background-repeat: no-repeat;
+  width: 70px;
   height: 300px;
+  background-size: cover;
   position: absolute;
 }
 /*# sourceMappingURL=main.css.map */

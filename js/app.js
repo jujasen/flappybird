@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bird = document.querySelector('.bird');
-    const sky = document.querySelector('.sky');
     const ground = document.querySelector('ground');
     const game = document.querySelector('.game');
 
     let birdLeft = 220;
     let birdBottom = 100;
-    let gravity = 2
+    let gravity = 2;
+    let gameDone = false;
 
     function startGame() {
         if(birdBottom > 0) {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bird.style.left = birdLeft + 'px';
     }
 
-    let timerId = setInterval(startGame,20)
+    let gameTimer = setInterval(startGame, 20)
 
     function control(e) {
         if (e.keyCode === 32) {
@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let pipeLeft = 500;
         let pipeBottom = randomHeight;
         const pipe = document.createElement('div');
-        pipe.classList.add('pipe');
+        if (!gameDone) {
+            pipe.classList.add('pipe');
+        }
         game.appendChild(pipe);
         pipe.style.left = pipeLeft + 'px';
         pipe.style.bottom = pipeBottom + 'px';
@@ -49,16 +51,33 @@ document.addEventListener('DOMContentLoaded', () => {
             pipeLeft -= 2;
             pipe.style.left = pipeLeft + 'px';
 
+
             if (pipeLeft === -60) {
                 clearInterval(pipeTimer);
                 game.removeChild(pipe);
             }
+
+            if (pipeLeft > 200 && pipeLeft < 280 && birdLeft === 220 && birdBottom < pipeBottom + 100|| birdBottom === 0) {
+                console.log("game over");
+                gameOver ();
+                clearInterval(pipeTimer);
+            }
         }
 
         let pipeTimer = setInterval(movePipe, 20)
-        setTimeout(createPipes, 3000);
+        if(!gameDone) {
+            setTimeout(createPipes, 3000);
+        }
+    }
+
+    createPipes();
+
+
+    function gameOver () {
+        clearInterval(gameTimer);
+        gameDone= true;
+        document.removeEventListener('keypress', control)
     }
 
 
-    createPipes();
 })
