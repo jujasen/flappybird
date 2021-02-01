@@ -1,4 +1,4 @@
 # Lovebird
 
 A cute-ified version of flappy bird.
-All illustrations made by me.
+Illustrations made by me except background-image.
