@@ -1,3 +1,4 @@
-# Flappybird
+# Lovebird
 
-My first time trying to build a game in javascript
+A cute-ified version of flappy bird.
+All illustrations made by me.
