@@ -1,0 +1,28 @@
+.game {
+  width: 500px;
+  height: 700px;
+  position: absolute;
+}
+
+.sky {
+  background-color: #b7b7ff;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+}
+
+.ground {
+  background-color: #efd4b0;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 500px;
+}
+
+.bird {
+  background-color: greenyellow;
+  position: absolute;
+  width: 60px;
+  height: 45px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;CACrB;;ACJD,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,OAAkB;EACpC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;CACrB;;ACLD,AAAA,OAAO,CAAC;EACJ,gBAAgB,EAAE,OAAkB;EACpC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,KAAK;CACb;;ACND,AAAA,KAAK,CAAC;EACF,gBAAgB,EAAE,WAAW;EAC7B,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/partials/_game.scss",
+        "../scss/partials/_sky.scss",
+        "../scss/partials/_ground.scss",
+        "../scss/partials/_bird.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
