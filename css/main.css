@@ -1,16 +1,27 @@
 body {
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  left: 25%;
+  position: absolute;
 }
 
 .game {
   width: 500px;
   height: 700px;
   position: absolute;
+  left: 80px;
 }
 
 .sky {
-  background-color: #b7b7ff;
+  background-image: url("../../img/sky3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 500px;
   height: 500px;
   position: absolute;
@@ -22,6 +33,7 @@ body {
   height: 200px;
   position: absolute;
   top: 500px;
+  z-index: +1;
 }
 
 .bird {
@@ -51,5 +63,31 @@ body {
   height: 300px;
   background-size: cover;
   position: absolute;
+}
+
+.border-left {
+  width: 80px;
+  height: 700px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+}
+
+.border-right {
+  width: 80px;
+  height: 700px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  left: 580px;
+}
+
+.border-top {
+  width: 660px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  top: -50px;
 }
 /*# sourceMappingURL=main.css.map */

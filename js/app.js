@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bird = document.querySelector('.bird');
     const ground = document.querySelector('ground');
     const game = document.querySelector('.game');
+    const start = document.querySelector('.start');
 
     let birdLeft = 220;
     let birdBottom = 100;
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let gameTimer = setInterval(startGame, 20)
+
 
     function control(e) {
         if (e.keyCode === 32) {
